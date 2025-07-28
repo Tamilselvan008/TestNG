@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MySuite" parallel="tests" thread-count="2">
+
+    <!-- Listener for reporting or logging -->
+    <listeners>
+        <listener class-name="com.exercise.framework.listeners.TestListeners"/>
+    </listeners>
+    <!-- Test 1: Run on Chrome -->
+    <test name="TestOnChrome">
+    <parameter name="BROWSER" value="chrome"/>
+    <parameter name="username" value="puratamilan17@gmail.com"/>
+    <parameter name="password" value="Tamil@2025"/>
+    <classes>
+        <class name="com.exercise.application.tests.ApplicationTest"/>
+    </classes>
+    </test>
+
+    <!-- Test 2: Run on Edge -->
+    <test name="TestOnFireFox">
+    <!-- Global parameters -->
+    <parameter name="BROWSER" value="firefox"/>
+    <parameter name="username" value="puratamilan17@gmail.com"/>
+    <parameter name="password" value="Tamil@2025"/>
+        <classes>
+            <class name="com.exercise.application.tests.ApplicationTest"/>
+        </classes>
+    </test>
+
+</suite>
