@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MySuite" parallel="tests" thread-count="2">
+<suite name="MySuite" >
 
     <!-- Listener for reporting or logging -->
     <listeners>
@@ -15,15 +15,15 @@
     </classes>
     </test>
 
-    <!-- Test 2: Run on Edge -->
-    <test name="TestOnFireFox">
-    <!-- Global parameters -->
-    <parameter name="BROWSER" value="firefox"/>
-    <parameter name="username" value="puratamilan17@gmail.com"/>
-    <parameter name="password" value="Tamil@2025"/>
-        <classes>
-            <class name="com.exercise.application.tests.ApplicationTest"/>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Test 2: Run on Edge &ndash;&gt;-->
+<!--    <test name="TestOnFireFox">-->
+<!--    &lt;!&ndash; Global parameters &ndash;&gt;-->
+<!--    <parameter name="BROWSER" value="firefox"/>-->
+<!--    <parameter name="username" value="puratamilan17@gmail.com"/>-->
+<!--    <parameter name="password" value="Tamil@2025"/>-->
+<!--        <classes>-->
+<!--            <class name="com.exercise.application.tests.ApplicationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

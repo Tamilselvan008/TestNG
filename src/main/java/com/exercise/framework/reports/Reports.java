@@ -13,7 +13,7 @@ public class Reports {
     public static ExtentTest logger; // ink
 
     @BeforeSuite(alwaysRun = true)
-    public static void setupReport() {
+    public void setupReport() {
         html = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\AutomationTestReport.html");
         extent = new ExtentReports();
         extent.attachReporter(html);

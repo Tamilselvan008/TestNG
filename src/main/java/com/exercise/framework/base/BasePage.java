@@ -17,7 +17,7 @@ public class BasePage extends Reports {
         private static WebDriver driver = null;
 
 
-        // Common method for browser Launching
+    // Common method for browser Launching
         @BeforeMethod(alwaysRun = true)
         @Parameters({"BROWSER"})
         public void launchBrowser(String browserName) {
@@ -37,8 +37,15 @@ public class BasePage extends Reports {
         // common method for close browser
         @AfterMethod(alwaysRun = true)
         public void tearDownBrowser() {
-            if (driver != null) {
-                driver.quit();
+            try {
+                Thread.sleep(2000);
+                if (driver != null) {
+                    Thread.sleep(2000);
+                    driver.quit();
+                }
+            } catch (Exception ignored){
+                System.err.println("Error while quitting driver: "+ignored.getMessage());
+
             }
         }
 // common method related to getting the driver instance
@@ -46,9 +53,6 @@ public class BasePage extends Reports {
 
 // common method related to setting the driver instance
 // purpose-used to set the driver instance in other classes
-        public static void setDriver(WebDriver driver) {
-            BasePage.driver = driver;
-        }
 
 
 
